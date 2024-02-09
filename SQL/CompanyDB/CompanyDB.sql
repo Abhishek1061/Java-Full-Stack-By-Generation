@@ -59,3 +59,41 @@ SELECT CONCAT(FirstName, ' ', LastName) AS EmpName, Salary AS EmpSalary FROM Emp
 -- Display only 2 rows of employee
 SELECT * FROM Employees LIMIT 2;
 
+-- Count the total number of employees
+SELECT COUNT(*) FROM Employees;
+
+-- Find the maximum and minimum salary among the employees
+SELECT MAX(Salary), MIN(Salary) FROM Employees;
+
+-- Count the number of employees in each position
+SELECT Position, Count(Department)
+FROM Employees
+GROUP BY Position;
+
+-- Count the number of employees in each position (corrected syntax)
+SELECT Position, Count(*) AS Count
+FROM Employees
+GROUP BY Position;
+
+-- Count the number of 'Manager' positions
+SELECT Position, Count(*) AS Count
+FROM Employees
+GROUP BY Position
+HAVING Position = 'Manager';
+
+-- Display all records from the Departments table
+SELECT * FROM Departments;
+
+-- Join Employees and Departments tables on DepartmentName and display FirstName, Salary, and ManagerID
+SELECT FirstName, Salary, ManagerID FROM Employees JOIN Departments ON Employees.Department = DepartmentName;
+
+-- Join Employees and Departments tables on DepartmentName and display FirstName (as Name), Salary, and ManagerID
+SELECT FirstName AS Name, Salary, ManagerID FROM Employees JOIN Departments ON Employees.Department = DepartmentName;
+
+-- Join Employees and Departments tables on DepartmentName (corrected table name) and display FirstName (as Name), Salary, and ManagerID
+SELECT FirstName AS Name, Salary, ManagerID FROM Employees JOIN Departments ON Employees.Department = Departments.DepartmentName;
+
+-- Join Employees and Departments tables on DepartmentName (corrected table name) and display all records
+SELECT * FROM Employees JOIN Departments ON Employees.Department = Departments.DepartmentName;
+
+
