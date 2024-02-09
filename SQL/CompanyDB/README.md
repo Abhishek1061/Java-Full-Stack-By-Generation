@@ -32,13 +32,22 @@ The `Departments` table stores information about the departments, including thei
 
 This repository also includes SQL queries to:
 
-1. Retrieve all employees' information.
-2. Update the salary of an employee where id is 2. Add 1000 in his existing salary.
-3. Delete an employee with a given EmployeeID.
-4. Retrieve all employees' information sorted by salary in descending order.
-5. Retrieve only first name and salary. Column name should be EmpName and Empsalary.
-6. Retrieve first & last name and salary. Column name should be EmpName and EmpSalary.
-7. Display only 2 rows of employee.
+# SQL Queries
+
+1. Retrieve all employees' information
+2. Update the salary of an employee where id is 2. Add 1000 in his existing salary
+3. Delete an employee with a given EmployeeID
+4. Retrieve all employees' information sorted by salary in descending order
+5. Retrieve only first name and salary. Column name should be EmpName and Empsalary
+6. Retrieve first & last name and salary. Column name should be EmpName and EmpSalary
+7. Display only 2 rows of employee
+8. Count the total number of employees
+9. Find the maximum and minimum salary among the employees
+10. Count the number of employees in each position
+11. Count the number of 'Manager' positions
+12. Display all records from the Departments table
+13. Join Employees and Departments tables on DepartmentName and display FirstName, Salary, and ManagerID
+14. Join Employees and Departments tables on DepartmentName (corrected table name) and display all records
 
 These queries can be used to manage and analyze the data in the `CompanyDB` database.
 
