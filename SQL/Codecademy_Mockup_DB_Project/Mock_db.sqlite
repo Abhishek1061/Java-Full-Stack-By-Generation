@@ -1,0 +1,79 @@
+
+-- Codecademy Mockup DataBase
+
+-- Have a look at the content of tables with limit of 200.
+SELECT * FROM progress
+LIMIT 200;
+SELECT * FROM users
+LIMIT 200;
+
+--  What are the Top 25 schools (.edu domains) with the most Codecademy learners?
+SELECT email_domain, COUNT(*) AS Total_Users
+FROM users
+WHERE email_domain LIKE '%.edu'
+GROUP BY 1
+ORDER BY Total_Users DESC
+LIMIT 25;
+
+--  How many .edu learners located in New York City are using Codecademy?
+SELECT COUNT(user_id) AS Total_Users
+FROM users
+WHERE email_domain LIKE '%.edu'
+AND city LIKE '%New_York%';
+
+-- The mobile_app column contains either mobile-user or NULL. How many of these Codecademy learners are using the mobile app?
+SELECT COUNT(user_id) AS Total_App_Users
+FROM users
+WHERE mobile_app IS NOT NULL;
+
+-- For .edu learners, what are the most popular sign-up times (hours of the day)?
+SELECT u.email_domain,
+       strftime('%H', u.sign_up_at) AS Sign_up_hour,
+       COUNT(*) AS Sign_up_count
+FROM users u
+WHERE u.email_domain LIKE '%.edu'
+GROUP BY u.email_domain, Sign_up_hour
+ORDER BY u.email_domain, Sign_up_hour;
+
+-- Which educational institutions within .edu domains offer courses in the most diverse range of programming languages among their Codecademy learners?
+SELECT u.email_domain, 
+       p.learn_cpp, 
+       p.learn_sql, 
+       p.learn_html, 
+       p.learn_javascript, 
+       p.learn_java 
+FROM users u 
+JOIN progress p 
+ON u.user_id = p.user_id 
+WHERE u.email_domain LIKE '%.edu' 
+GROUP BY u.email_domain;
+
+-- What courses are the New Yorkers students taking?
+SELECT u.city, 
+       p.learn_cpp, 
+       p.learn_sql, 
+       p.learn_html, 
+       p.learn_javascript, 
+       p.learn_java 
+FROM users u 
+JOIN progress p 
+ON u.user_id = p.user_id 
+WHERE u.city LIKE '%New_York%' 
+GROUP BY u.city;
+
+-- What courses are the Chicago students taking?
+SELECT u.city, 
+       p.learn_cpp, 
+       p.learn_sql, 
+       p.learn_html, 
+       p.learn_javascript, 
+       p.learn_java 
+FROM users u 
+JOIN progress p 
+ON u.user_id = p.user_id 
+WHERE u.city LIKE '%Chicago%' 
+GROUP BY u.city;
+
+
+
+
