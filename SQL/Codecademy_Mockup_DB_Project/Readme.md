@@ -1,4 +1,4 @@
-# Codecademy Learners Data Analysis 📊
+# Codecademy Learners Mockup Data Analysis 📊
 
 Welcome to the Codecademy Learners Data Analysis project! In this project, we'll be analyzing mockup data of Codecademy learners to gain insights into their learning patterns and behaviors.
 
@@ -22,9 +22,7 @@ Our goals for this project include:
 2. Answer questions such as the top 25 schools (.edu domains), .edu learners in New York, and mobile app users.
 3. Use the `strftime()` function to analyze sign-up counts for each hour.
 4. Perform table joins to uncover insights like course preferences among different schools and courses taken by learners in specific locations.
-
-## Setup Instructions
-If you choose to work on this project, you can download the necessary files from this repository and use SQLite to run SQL commands. 
+   
 ## Database Schema
 ### `users` Table:
 - `user_id`: Integer
@@ -42,6 +40,13 @@ If you choose to work on this project, you can download the necessary files from
 - `learn_html`: Text
 - `learn_javascript`: Text
 - `learn_java`: Text
+  
+## Setup Instructions
+If you choose to work on this project, you can download the necessary files from this repository resources and use SQLite to run SQL commands using DB Browser.
+
+## Resources
+- [SQLite Setup Guide](https://www.codecademy.com/article/what-is-sqlite)
+- [DB Browser](https://www.codecademy.com/article/setting-up-db-browser)
 
 ## Ready to Dive In?
 Let's start analyzing the Codecademy learners data and uncover valuable insights that will help us understand their learning journey better! 🚀
