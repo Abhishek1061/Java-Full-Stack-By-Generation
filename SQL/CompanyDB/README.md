@@ -48,6 +48,7 @@ This repository also includes SQL queries to:
 12. Display all records from the Departments table
 13. Join Employees and Departments tables on DepartmentName and display FirstName, Salary, and ManagerID
 14. Join Employees and Departments tables on DepartmentName (corrected table name) and display all records
+15. Create the SubQuery for getting the MAX salary from employees table with details.
 
 These queries can be used to manage and analyze the data in the `CompanyDB` database.
 
