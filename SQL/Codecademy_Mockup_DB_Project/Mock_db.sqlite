@@ -22,9 +22,9 @@ WHERE email_domain LIKE '%.edu'
 AND city LIKE '%New_York%';
 
 -- The mobile_app column contains either mobile-user or NULL. How many of these Codecademy learners are using the mobile app?
-SELECT COUNT(user_id) AS Total_App_Users
+SELECT COUNT(mobile_app) AS Total_App_Users
 FROM users
-WHERE mobile_app IS NOT NULL;
+WHERE mobile_app = 'mobile-user';
 
 -- For .edu learners, what are the most popular sign-up times (hours of the day)?
 SELECT u.email_domain,
