@@ -96,4 +96,6 @@ SELECT FirstName AS Name, Salary, ManagerID FROM Employees JOIN Departments ON E
 -- Join Employees and Departments tables on DepartmentName (corrected table name) and display all records
 SELECT * FROM Employees JOIN Departments ON Employees.Department = Departments.DepartmentName;
 
+-- Sub-Query
+ SELECT * FROM Employees WHERE Salary < (SELECT MAX(Salary) FROM Employees);
 
