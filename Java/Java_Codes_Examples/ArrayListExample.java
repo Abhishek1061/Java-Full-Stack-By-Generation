@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class ArrayListExample {
 
@@ -21,7 +19,7 @@ public class ArrayListExample {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		ArrayList<Integer> arrList = new ArrayList<Integer>();
+		Vector<Integer> arrList = new Vector<Integer>();
 		
 		System.out.print("Enter the length of ArrayList : ");
 		int numOfElements = sc.nextInt();
@@ -37,7 +35,7 @@ public class ArrayListExample {
 		if(arrList.isEmpty()) {
 			System.out.println("ArrayList is empty.");
 		}else {
-			System.out.println("Original ArrayList: " + arrList);
+			System.out.println("Original ArrayList: " + arrList.capacity());
 			System.out.println("Reversed ArrayList: " + reverseArrayList(arrList));
 		}
 		sc.close();
@@ -53,8 +51,8 @@ public class ArrayListExample {
 		
 	}
 	//Method No.2 to solve reverse ArrayList
-	public static ArrayList<Integer> reverseArrayList(ArrayList<Integer> list){
-		ArrayList<Integer> reversedList = new ArrayList<>(list);
+	public static ArrayList<Integer> reverseArrayList(Vector<Integer> arrList){
+		ArrayList<Integer> reversedList = new ArrayList<>(arrList);
 		Collections.reverse(reversedList); //Collections is the class which comes under collection framework. 
 		return reversedList;
 	}		
