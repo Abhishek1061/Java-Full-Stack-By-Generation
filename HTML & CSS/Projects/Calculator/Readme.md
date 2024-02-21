@@ -17,9 +17,9 @@ This project demonstrates how to create a basic calculator using HTML, CSS, and 
 
 1. Clone this repository or create a new folder for your project.
 2. Inside the project folder, create three files:
-   - `index.html`: The main HTML file
+   - `index.html`: The main HTML file and JavaScript logic is coded in same file.
    - `style.css`: The CSS file for styling
-   - `script.js`: The JavaScript file for calculator logic
+
 
 
 
