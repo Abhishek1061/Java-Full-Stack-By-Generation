@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Resgistration  Form</h2>
+    <form method="post" action="http://server1">
+        <label for="name">Enter your name:</label> <br>
+        <input type="text" name="fname">
+        <br/><br>
+        
+        <label for="age">Enter your age:</label><br>
+        <input type="number" name="age">
+        <br/><br>
+        
+        <label for="email">Email address:</label><br>
+        <input type="email" name="Email">
+        <br/>
+        <br>
+
+        <label for="Password"></label>Enter Password:<br>
+        <input type="password" name="Password">
+        <br/><br>
+
+        <label for="Mobile Number">Enter mobile No:</label><br>
+        <input type="number" name="No"/>
+        <br/><br>
+
+        Gender:
+        Male 
+        <input type="radio" name="gender" value="Male" id="Male">
+        Female
+        <input type="radio" name="gender" value="Female" id="Male">
+        <br><br>
+        Select Country: 
+        <select name="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Japan">Japan</option>
+        </select>
+        <br><br>
+
+        <label for="skills">Skills</label> <br>
+        <input type="checkbox"  name="skills[]" value="JavaScript"> Java Script<br>
+        <input type="checkbox"  name="skills[]" value="Html">  Html<br>
+        <input type="checkbox"  name="skills[]" value="CSS">  Css<br>
+        <input type="checkbox"  name="skills[]" value="Java">   Java<br>
+
+        <label for="Skills Level">Skills Level</label>
+        <input type="range" name="Skills"  min="0" max="10" value="0"><br><br>
+
+
+        Comment: <br><br>
+        <textarea rows="10" cols="30" name="comment"></textarea>
+        <br/><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
