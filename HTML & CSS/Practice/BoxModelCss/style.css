@@ -1,0 +1,37 @@
+.a , .b{
+    background-color: rgb(38, 255, 255);
+    padding: 10px;
+    /* margin: 40px ; */
+    border: 20px solid rgb(131, 95, 81);
+    border-width: 21px;
+    box-sizing: border-box;
+    text-align: justify;
+    display:block;
+    margin: auto ;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    /* position: static; */
+    height: 200px;
+    width: 400px;
+
+
+    /* background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 20px;
+    margin: 80px; */
+}
+
+.b{
+    height: 200px;
+    overflow: scroll;
+}
+
+body{
+    background-size: 1500px;
+    width: 100vw;
+    height: 300vh;
+    background-image: url(../Images/class.webp);
+    background-repeat:no-repeat;
+    backface-visibility: hidden;
+}

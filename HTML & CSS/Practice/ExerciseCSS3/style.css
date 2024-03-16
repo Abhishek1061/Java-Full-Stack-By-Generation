@@ -1,0 +1,24 @@
+.image{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 0 auto;
+    display: block;
+    
+}
+.table2{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    border: 1px black;
+    border-style: dotted ;
+}
+table{
+    background-color: antiquewhite;
+    width: 800px;
+    margin: 0 auto;
+    display: block;
+    border-style: dashed;
+}
