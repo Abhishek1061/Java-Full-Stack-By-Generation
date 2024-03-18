@@ -1,0 +1,30 @@
+<!-- Create an HTML form that contains the first and last names and a submit button. Write a JavaScript program to print the value of the first and last names in the alert box. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Name Form</title>
+</head>
+<body>
+<h2>Enter Your Name</h2>
+<form id="nameForm">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName"><br><br>
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.getElementById('nameForm').addEventListener('submit', function(event) {
+
+    // event.preventDefault();
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    alert('First Name: ' + firstName + '\nLast Name: ' + lastName);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- Write a javascript programme to store some color names in the array and 
+    change the background color of the window every time the page is refreshed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Changer</title>
+<script>
+  // Array of color names
+  const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple','black','gray'];
+
+  // Function to set background color
+  function setBackgroundColor() {
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    document.body.style.backgroundColor = colors[randomIndex];
+  }
+
+  // Set background color when page loads
+  window.onload = setBackgroundColor;
+</script>
+</head>
+<body>
+<h2>Welcome!</h2>
+<p>This page will have a random background color every time it is refreshed.</p>
+</body>
+</html>

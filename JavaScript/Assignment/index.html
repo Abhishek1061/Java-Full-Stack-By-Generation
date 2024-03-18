@@ -1,0 +1,46 @@
+<!-- Design a webpage that prompts you with a dialogue box to input a color name. Once entered, 
+    the background transforms to your chosen color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+
+</head>
+<body>
+<h2>Choose a Color</h2>
+<form id="colorForm">
+  <input type="text" id="colorInput" placeholder="Enter a color name">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.getElementById('colorForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const color = document.getElementById('colorInput').value;
+    document.body.style.backgroundColor = color;
+  });
+</script>
+</body>
+</html>

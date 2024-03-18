@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        h1,h2{
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const colors = ['red', 'blue', ' yellow', 'orange', 'wheat', 'green', 'gray', 'purple'];
+
+        function backGroundColor(){
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            document.body.style.backgroundColor = colors[randomIndex];
+        }
+
+        window.onload = backGroundColor;
+    </script>
+
+    <h1>Hello</h1>
+    <h2>Please refresh the page to chnage the background color</h2>
+</body>
+</html>
